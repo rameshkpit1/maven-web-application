@@ -98,14 +98,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.127.18.21:9980/mithuntechnologies/repository/facebook-release/</url>
+	      <name>Anika Technologies Releases Nexus Repository</name>
+	      <url>http://18.119.161.216:8081/anikatech/repository/flipkart-releases/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.127.18.21:9980/mithuntechnologies/repository/facebook-snapshot/</url>
+	      <name>AnikaTechnologies Snapshot Nexus Repository </name>
+	      <url>http://18.119.161.216:8081/anikatech/repository/flipkart-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
