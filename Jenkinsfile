@@ -11,9 +11,7 @@ node
   }
  
   stage('ExecuteSonarReport'){
-      withSonarQubeEnv('My SonarQube Server'){
     sh "${mavenHome}/bin/mvn sonar:sonar"
-      }
   }
   stage("Quality Gate"){
     timeout(time: 1, unit: 'HOURS') { // Just in case something goes wrong, pipeline will be killed after a timeout
