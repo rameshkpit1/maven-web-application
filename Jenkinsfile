@@ -1,4 +1,4 @@
-node
+node('master')
 {
     def mavenHome= tool name: "maven-3.8.4"  //Name should be same as global tool configuration maven name.
     properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
@@ -13,6 +13,7 @@ node
   stage('ExecuteSonarReport'){
     sh "${mavenHome}/bin/mvn sonar:sonar"
   }
+    /*
   stage("Quality Gate"){
     timeout(time: 1, unit: 'HOURS') { // Just in case something goes wrong, pipeline will be killed after a timeout
     def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
@@ -23,7 +24,7 @@ node
     }
   }
 }
-  /*
+ 
   stage('UploadArtifactsIntoNexus'){
       sh "${mavenHome}/bin/mvn deploy"
   }
